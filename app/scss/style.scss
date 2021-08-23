@@ -3,12 +3,207 @@
 @import "fonts";
 @import "global";
 
+// ---------------------------------------------------------------------------------------------
+
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item + &__item {
+    margin: 0px 0px 0px 35px;
+  }
+  &__link {
+    @extend %r-400;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 3px 9px;
+    border-bottom: 1px solid transparent;
+    text-transform: uppercase;
+    color: $title;
+    transition: all 0.3s;
+    &:hover {
+      @extend %r-700;
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+}
+.user-nav {
+  display: flex;
+  &__item + &__item {
+    margin: 0px 0px 0px 25px;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    span {
+      display: block;
+      position: absolute;
+      top: 1px;
+      right: -2px;
+      transform: translate(50%, -50%);
+      background-color: $accent;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      color: #fff;
+      @extend %qs-500;
+      font-size: 12px;
+      line-height: 20px;
+      border-radius: 50%;
+    }
+  }
+}
+
+// =============================================================================================
+// =============================================================================================
+
+.footer {
+  background-color: $bg;
+  a {
+    color: inherit;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0 40px;
+    border-bottom: 1px solid #ececec;
+  }
+  &__item + &__item {
+    margin: 0px 0px 0px 30px;
+  }
+  &__item--address {
+    max-width: 250px;
+    width: 100%;
+  }
+  &__item--useful,
+  &__item--account {
+    max-width: 170px;
+    width: 100%;
+  }
+  &__logo {
+    display: block;
+    margin: 0px 0px 30px 0px;
+  }
+  &__address,
+  &__email {
+    display: block;
+    font-style: normal;
+    margin: 0px 0px 10px 0px;
+  }
+  &__email,
+  &__tel {
+    transition: all .3s;
+    &:hover {
+      color: $accent;
+    }
+  }
+  &__tel {
+    display: block;
+    margin: 0px 0px 37px 0px;
+  }
+  &__social-list {
+    display: flex;
+  }
+  &__social-item + &__social-item {
+    margin: 0px 0px 0px 20px;
+  }
+  &__social-link {
+    fill: $default;
+    transition: all .3s;
+    &:hover {
+      fill: $accent;
+    }
+  }
+  &__title {
+    @extend %r-500;
+    color: $title;
+    font-size: 22px;
+    margin: 0px 0px 33px 0px;
+  }
+  &__list-item {
+    margin: 0px 0px 10px 0px;
+  }
+  &__list-link {
+    transition: all .3s;
+    &:hover {
+      color: $accent;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    font-size: 12px;
+  }
+  &__accept-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__accept-item + &__accept-item{
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+.subscribe-newsletter {
+  max-width: 470px;
+  width: 100%;
+  &__title {
+    @extend %r-500;
+    color: $title;
+    font-size: 22px;
+    margin: 0px 0px 33px 0px;
+  }
+  &__text {
+    margin: 0px 0px 30px 0px;
+  }
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+  &__input {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 12px 10px 12px 15px;
+    flex-grow: 1;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    &::placeholder {
+      color: $default;
+    }
+  }
+  &__btn {
+    display: block;
+    border: 0;
+    background-color: $accent;
+    font-size: 16px;
+    cursor: pointer;
+    @extend %r-400;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 140px;
+    width: 100%;
+    padding: 12px 15px 12px 15px;
+    margin: 0 0 0 10px;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+}
+
+// =============================================================================================
+// =============================================================================================
 
 
 
-
-
-
-
+// ---------------------------------------------------------------------------------------------
 
 @import "media";
