@@ -1,6 +1,7 @@
 @import "reset";
-@import "vars";
 @import "fonts";
+@import "libs";
+@import "vars";
 @import "global";
 
 // ---------------------------------------------------------------------------------------------
@@ -183,26 +184,84 @@
     }
   }
   &__btn {
-    display: block;
     border: 0;
-    background-color: $accent;
-    font-size: 16px;
     cursor: pointer;
-    @extend %r-400;
-    text-transform: uppercase;
-    color: #fff;
     max-width: 140px;
     width: 100%;
-    padding: 12px 15px 12px 15px;
     margin: 0 0 0 10px;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+    text-align: center;
   }
 }
 
 // =============================================================================================
 // =============================================================================================
 
-
+.main-silder {
+  background: url("../images/slider-bg.png") 53% 42% no-repeat, $bg;
+  &__container {
+    max-width: 1540px;
+  }
+  &__inner {
+    padding: 60px 0 74px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    padding: 120px 0px 0px 170px;
+  }
+  &__title {
+    @extend %r-700;
+    font-size: 58px;
+    line-height: 68px;
+    color: $title;
+    max-width: 570px;
+    margin: 0px 0px 20px 0px;
+  }
+  &__text {
+    max-width: 470px;
+    margin: 0px 0px 55px 0px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: -74px 0 0 0;
+    li + li {
+      margin: 0px 0px 0px 5px;
+    }
+    li {
+      button {
+        font-size: 0;
+        padding: 0;
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        cursor: pointer;
+        position: relative;
+        transition: all .3s;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $accent;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        border: 1px solid $accent;
+      }
+    }
+  }
+}
 
 // ---------------------------------------------------------------------------------------------
 
