@@ -35,3 +35,16 @@ body {
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
   text-align: center;
 }
+
+.heading {
+  max-width: 570px;
+  text-align: center;
+  &__title {
+    @extend %r-700;
+    font-size: 48px;
+    line-height: 1;
+    color: $title;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+  }
+}
