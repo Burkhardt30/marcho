@@ -403,6 +403,55 @@
 // =============================================================================================
 // =============================================================================================
 
+.video-fashion {
+  padding: 120px 0;
+  background: url(../images/pattern-bg.svg), $bg;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__popup {
+    width: 535px;
+    height: 479px;
+    flex: 1 0 auto;
+    margin: 0px 65px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__play-btn {
+    display: block;
+    background: url(../images/play-btn.svg);
+    width: 130px;
+    height: 130px;
+  }
+  &__content {
+  }
+  &__subtitle {
+    font-size: 22px;
+    color: $accent;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+  }
+  &__title {
+    @extend %r-700;
+    color: $title;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0px 0px 25px 0px;
+  }
+  &__text {
+    margin: 0px 0px 55px 0px;
+  }
+  &__btn {
+  }
+}
+
+// =============================================================================================
+// =============================================================================================
+
 
 
 // ---------------------------------------------------------------------------------------------
