@@ -103,7 +103,7 @@
   }
   &__email,
   &__tel {
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       color: $accent;
     }
@@ -120,7 +120,7 @@
   }
   &__social-link {
     fill: $default;
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       fill: $accent;
     }
@@ -135,7 +135,7 @@
     margin: 0px 0px 10px 0px;
   }
   &__list-link {
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       color: $accent;
     }
@@ -151,7 +151,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__accept-item + &__accept-item{
+  &__accept-item + &__accept-item {
     margin: 0px 0px 0px 20px;
   }
 }
@@ -241,7 +241,7 @@
         border: 1px solid transparent;
         cursor: pointer;
         position: relative;
-        transition: all .3s;
+        transition: all 0.3s;
         &::after {
           content: "";
           position: absolute;
@@ -269,7 +269,7 @@
 .categories {
   padding: 120px 0;
   background: url(../images/decor/categories-left-bg.svg) center left no-repeat,
-              url(../images/decor/categories-right-bg.svg) center right no-repeat;
+    url(../images/decor/categories-right-bg.svg) center right no-repeat;
 }
 
 .features {
@@ -316,7 +316,7 @@
 
 .top-categories {
   &__heading {
-    margin: 0px auto 60px;
+    margin-bottom: 60px;
   }
   &__items {
     min-height: 635px;
@@ -395,7 +395,7 @@
     line-height: 1;
     text-transform: uppercase;
     border-bottom: 1px solid transparent;
-    transition: all .3s;
+    transition: all 0.3s;
     padding: 0px 0px 6px 0px;
   }
 }
@@ -426,8 +426,6 @@
     width: 130px;
     height: 130px;
   }
-  &__content {
-  }
   &__subtitle {
     font-size: 22px;
     color: $accent;
@@ -445,8 +443,150 @@
   &__text {
     margin: 0px 0px 55px 0px;
   }
-  &__btn {
+}
+
+// =============================================================================================
+// =============================================================================================
+
+.products {
+  padding: 115px 0 120px;
+  &__heading {
+    margin-bottom: 60px;
   }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 20px;
+    margin: 0px 0px 60px 0px;
+  }
+  &__btn {
+    color: $title;
+    @extend %r-400;
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    text-transform: uppercase;
+    border: 1px solid $accent;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
+.products-item {
+  max-width: 370px;
+  &--sale {
+    .products-item__img-box {
+      position: relative;
+      &::before {
+        content: "sale";
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: #fff;
+        background-color: $accent;
+        line-height: 30px;
+        @extend %r-400;
+        text-transform: uppercase;
+        text-align: center;
+        width: 60px;
+        height: 30px;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+        z-index: 1;
+      }
+    }
+  }
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin: 0px 0px 30px 0px;
+    &:hover {
+      .products-item__controls {
+        bottom: 50px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__controls {
+    position: absolute;
+    bottom: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 212px;
+    height: 50px;
+    border-radius: 25px;
+    transition: all .3s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      background-color: #ececec;
+      height: 30px;
+      width: 1px;
+    }
+    &::before {
+      left: 33.33%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      right: 33.33%;
+      transform: translate(50%, -50%);
+    }
+  }
+  &__control {
+    display: block;
+    line-height: 0;
+    padding: 13px 13px;
+    path {
+      transition: all 0.3s;
+    }
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 22px;
+    @extend %r-400;
+    color: $title;
+    margin: 0px 0px 15px 0px;
+  }
+  &__price {
+    display: flex;
+    color: $title;
+  }
+  &__actual {
+    @extend %r-500;
+    margin: 0px 23px 0px 0px;
+  }
+  &__old {
+    @extend %r-400;
+    color: #ccccce;
+    text-decoration: line-through;
+  }
+}
+
+.stars {
+  margin: 0px 0px 15px 0px;
 }
 
 // =============================================================================================

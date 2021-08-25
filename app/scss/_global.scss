@@ -39,6 +39,7 @@ body {
 .heading {
   max-width: 570px;
   text-align: center;
+  margin: 0 auto;
   &__title {
     @extend %r-700;
     font-size: 48px;
