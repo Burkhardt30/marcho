@@ -592,6 +592,79 @@
 // =============================================================================================
 // =============================================================================================
 
+.promo {
+  background: url(../images/promo-bg.jpg) center left / cover no-repeat;
+  &__inner {
+    padding: 150px 0 160px;
+    max-width: 570px;
+    width: 100%;
+    margin: 0px 0px 0px auto;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 22px;
+    color: $accent;
+    text-transform: uppercase;
+    margin: 0px 0px 20px 0px;
+  }
+  &__title {
+    @extend %r-700;
+    color: $title;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0px 0px 55px 0px;
+  }
+  &__countdown {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 60px 0px;
+  }
+  &__countdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+  }
+  &__days,
+  &__hours,
+  &__minutes,
+  &__seconds {
+    @extend %r-700;
+    color: $title;
+    font-size: 48px;
+    line-height: 1;
+  }
+  &__btn {
+    color: $title;
+    @extend %r-400;
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    text-transform: uppercase;
+    border: 1px solid $accent;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
+.partners {
+  padding: 100px 0 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  &__item {
+  }
+}
 
 
 // ---------------------------------------------------------------------------------------------
