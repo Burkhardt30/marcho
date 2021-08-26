@@ -68,6 +68,69 @@
 // =============================================================================================
 // =============================================================================================
 
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 130px 135px;
+  }
+  &__title {
+    @extend %r-400;
+    color: $title;
+    font-size: 48px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+    position: relative;
+    padding: 0px 0px 0px 25px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/icons/home-icon.svg);
+    }
+  }
+  &__item {
+    color: #727272;
+    margin: 0px 40px 0px 0px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: -25px;
+      width: 9px;
+      height: 10px;
+      background-image: url(../images/icons/angle-right.svg);
+    }
+    &:last-child {
+      color: $accent;
+      margin: 0;
+      &::after {
+        content: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
+
+// =============================================================================================
+// =============================================================================================
+
 .footer {
   background-color: $bg;
   a {
