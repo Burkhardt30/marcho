@@ -829,6 +829,73 @@
 // =============================================================================================
 // =============================================================================================
 
+.modal {
+  padding: 115px 0;
+  &__links {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 50px 0px;
+  }
+  &__link {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    color: #909090;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+  &__link--inactive {
+    @extend %r-400;
+  }
+  &__link--active {
+    @extend %r-700;
+    color: $accent;
+  }
+  &__form {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__label {
+    display: block;
+    margin: 0px 0px 30px 0px;
+    &:nth-child(2) {
+      margin: 0px 0px 55px 0px;
+    }
+    &:nth-child(3) {
+      display: inline-block;
+      margin: 0px 0px 15px 0px;
+    }
+  }
+  &__input {
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: $bg;
+    height: 60px;
+    margin: 10px 0px 0px 0px;
+    padding: 15px;
+  }
+  &__form-btn {
+    border: none;
+    display: block;
+    width: 100%;
+    @extend %r-400;
+    background-color: $title;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px;
+    margin: 0px 0px 15px 0px;
+    letter-spacing: 4px;
+  }
+  &__lost-pass {
+    color: $accent;
+  }
+}
+
+// =============================================================================================
+// =============================================================================================
+
 
 
 // ---------------------------------------------------------------------------------------------
