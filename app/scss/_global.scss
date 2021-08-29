@@ -23,17 +23,20 @@ body {
 }
 
 .marcho-btn {
+  border: none;
   color: #fff;
   background-color: $accent;
   display: block;
   font-size: 16px;
   @extend %r-400;
   text-transform: uppercase;
+  letter-spacing: 1px;
   max-width: 160px;
   width: 100%;
-  padding: 12px 15px 12px 15px;
+  padding: 12px 10px;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
   text-align: center;
+  cursor: pointer;
 }
 
 .heading {

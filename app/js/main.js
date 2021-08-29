@@ -1,5 +1,19 @@
 $(function () {
 
+  $(".filter-price__input").ionRangeSlider({
+    type: 'double',
+
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+
+  });
+
   $('.main-silder__inner').slick({
     arrows: false,
     dots: true,
@@ -31,33 +45,33 @@ $(function () {
       seconds: seconds
     };
   }
-  
+
   function initializeClock(id, endtime) {
     var clock = document.querySelector(".promo__countdown");
     var daysSpan = clock.querySelector(".promo__days");
     var hoursSpan = clock.querySelector(".promo__hours");
     var minutesSpan = clock.querySelector(".promo__minutes");
     var secondsSpan = clock.querySelector(".promo__seconds");
-  
+
     function updateClock() {
       var t = getTimeRemaining(endtime);
-  
+
       if (t.total <= 0) {
         clearInterval(timeinterval);
         var deadline = new Date(Date.parse(new Date()) + 6 * 1000);
         initializeClock('promo__countdown', deadline);
       }
-  
+
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
       minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
       secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
     }
-  
+
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
   }
-  
+
   var deadline = $('.promo__countdown').attr('data-time');
   initializeClock("promo__countdown", deadline);
 
