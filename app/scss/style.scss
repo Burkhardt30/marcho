@@ -185,6 +185,9 @@
   &__social-link {
     fill: $default;
     transition: all 0.3s;
+    svg {
+      height: 16px;
+    }
     &:hover {
       fill: $accent;
     }
@@ -549,7 +552,7 @@
       flex-shrink: 0;
       margin: 0px;
       &:hover {
-        transition: all .3s;
+        transition: all 0.3s;
         .products-item__controls {
           bottom: 50%;
           transform: translate(-50%, 50%);
@@ -610,7 +613,7 @@
     .products-item__btn {
       background-color: $title;
       box-shadow: none;
-      transition: all .3s;
+      transition: all 0.3s;
       &:hover {
         background-color: $accent;
         box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
@@ -711,7 +714,7 @@
     font-size: 22px;
     @extend %r-400;
     color: $title;
-    margin: 0px 0px 15px 0px;
+    margin: 15px 0px;
   }
   &__price {
     display: flex;
@@ -729,10 +732,6 @@
   &__btn-box {
     display: none;
   }
-}
-
-.stars {
-  margin: 0px 0px 15px 0px;
 }
 
 // ========================================PROMO================================================
@@ -1357,6 +1356,265 @@
     border: 1px solid #ebebeb;
     width: 150px;
     padding: 10px;
+  }
+}
+
+// =======================================PRODUCT======================================================
+// =============================================================================================
+
+.product-page {
+  padding: 120px 0 5px;
+  &__inner {
+  }
+}
+
+.product-item {
+  display: flex;
+  &__slider {
+    margin: 0px 70px 0px 0px;
+    display: flex;
+  }
+  &__content {
+    width: 370px;
+  }
+  &__title {
+    @extend %r-500;
+    font-size: 22px;
+    line-height: 1;
+    color: $title;
+    margin: 0px 0px 15px 0px;
+  }
+  &__body {
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 30px 0px;
+  }
+  &__price {
+    display: flex;
+    font-size: 18px;
+  }
+  &__price-new {
+    color: $title;
+  }
+  &__price-old {
+    margin: 0px 0px 0px 15px;
+    text-decoration: line-through;
+  }
+  &__stars {
+    display: flex;
+    align-items: center;
+    span {
+      color: $title;
+      font-size: 18px;
+    }
+  }
+  &__text {
+    margin: 0px 0px 35px 0px;
+    span {
+      display: block;
+      color: $title;
+      font-size: 18px;
+      @extend %r-400;
+    }
+  }
+  &__form {
+  }
+  &__color {
+    margin: 0px 0px 30px 0px;
+  }
+  &__color-title {
+    color: $title;
+    font-size: 18px;
+    @extend %r-400;
+    margin: 0px 0px 7px 0px;
+  }
+  &__color-label + &__color-label {
+    margin: 0px 0px 0px 5px;
+  }
+  &__color-input {
+    @extend %checkbox-hidden;
+    &:checked + .product-item__color-radio {
+      border-color: $accent;
+    }
+  }
+  &__color-radio {
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d5d5d7;
+    position: relative;
+    span {
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__size {
+    margin: 0px 0px 35px 0px;
+  }
+  &__size-title {
+    color: $title;
+    font-size: 18px;
+    @extend %r-400;
+    margin: 0px 0px 7px 0px;
+  }
+  &__size-label + &__size-label {
+    margin: 0px 0px 0px 5px;
+  }
+  &__size-input {
+    @extend %checkbox-hidden;
+    &:checked + .product-item__size-radio {
+      border-color: $accent;
+    }
+  }
+  &__size-radio {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ececec;
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info {
+    margin: 0px 0px 35px 0px;
+  }
+  &__info-item {
+    display: flex;
+    align-items: center;
+  }
+  &__info-title {
+    color: $title;
+    width: 95px;
+    margin: 0px 5px 0px 0px;
+    overflow-wrap: break-word;
+  }
+  &__info-text {
+    line-height: 0;
+  }
+  &__social-link {
+    path {
+      fill: $default;
+      transition: all 0.3s;
+    }
+    svg {
+      height: 16px;
+    }
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__social-link + &__social-link {
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+  }
+  &__number {
+    border: none;
+    color: $title;
+  }
+  &__btn {
+    display: inline-block;
+    margin: 0px 0px 0px 15px;
+  }
+}
+
+.jq-number {
+  width: 114px;
+  position: relative;
+  &__field {
+    padding: 10px 0px;
+    border: 1px solid #f0f0f0;
+    input {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__spin {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 1px;
+      background-color: $title;
+    }
+    &.minus {
+      left: 13px;
+    }
+    &.plus {
+      right: 13px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 15px;
+        width: 1px;
+        background-color: $title;
+      }
+    }
+  }
+}
+
+.product-slider {
+  max-width: 730px;
+  .slick-vertical .slick-slide {
+    height: 140px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__small {
+    width: 140px;
+    margin-right: 30px;
+  }
+  &__small-item {
+    height: 140px;
+    padding: 0px 0px 100% 0px;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  &__big {
+    width: 560px;
+  }
+  &__big-item {
+    padding: 0px 0px 650px 0px;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 }
 
