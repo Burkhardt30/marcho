@@ -21,8 +21,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ol,
+ul,
 li,
 figure,
 figcaption,
@@ -43,6 +43,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 input,

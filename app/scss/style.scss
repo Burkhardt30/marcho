@@ -537,6 +537,86 @@
 
 .products-item {
   max-width: 370px;
+  &.products-item--list {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    border: 1px solid #ececec;
+    .products-item__img-box {
+      min-height: 250px;
+      height: 100%;
+      width: 200px;
+      flex-shrink: 0;
+      margin: 0px;
+      &:hover {
+        transition: all .3s;
+        .products-item__controls {
+          bottom: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+    }
+    .products-item__controls {
+      background-color: transparent;
+      justify-content: center;
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+    .products-item__control {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0px 15px 0px 0px;
+      box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(2) {
+        display: none;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .products-item__box-wrapper {
+      padding: 25px 40px;
+    }
+    .products-item__title-box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0px 0px 9px 0px;
+    }
+    .stars {
+      margin: 0 0 0 35px;
+    }
+    .products-item__title {
+      order: -1;
+      flex: 0 1 100%;
+      margin: 0px 0px 10px 0px;
+    }
+    .products-item__price {
+      order: -1;
+      margin-bottom: -3px;
+    }
+    .products-item__btn-box {
+      display: block;
+    }
+    .products-item__text {
+      margin: 0px 0px 25px 0px;
+    }
+    .products-item__btn {
+      background-color: $title;
+      box-shadow: none;
+      transition: all .3s;
+      &:hover {
+        background-color: $accent;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      }
+    }
+  }
   &--sale {
     .products-item__img-box {
       position: relative;
@@ -561,6 +641,7 @@
   &__img-box {
     position: relative;
     height: 370px;
+    width: 370px;
     overflow: hidden;
     margin: 0px 0px 30px 0px;
     &:hover {
@@ -638,12 +719,15 @@
   }
   &__actual {
     @extend %r-500;
-    margin: 0px 23px 0px 0px;
   }
   &__old {
     @extend %r-400;
     color: #ccccce;
     text-decoration: line-through;
+    margin: 0px 0px 0px 23px;
+  }
+  &__btn-box {
+    display: none;
   }
 }
 
@@ -940,7 +1024,6 @@
   padding: 120px 0 115px;
   &__inner {
     display: flex;
-    justify-content: space-between;
   }
   &__filters {
     margin-right: 30px;
@@ -1193,10 +1276,89 @@
   }
 }
 
+// ---------------------------------SHOP CONTENT----------------------------------
 
+.shop-content {
+  flex-grow: 1;
+  max-width: 770px;
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ebebeb;
+    padding: 20px 30px;
+    margin: 0px 0px 40px 0px;
+  }
+  &__filter-view {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btn {
+    margin-left: 15px;
+    line-height: 0;
+    cursor: pointer;
+  }
+  &__filter-btn--active {
+    path {
+      fill: $accent;
+    }
+  }
+  &__filter-form {
+    display: flex;
+  }
+  &__filter-sort {
+    margin: 0px 35px 0px 0px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+    margin: 0px 0px 35px 0px;
+  }
+  &__item {
+    margin: 0px 0px 40px 0px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
 
-
-
+.jq-selectbox {
+  &__select {
+    padding: 0 30px 0 0px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: $default;
+    text-shadow: none;
+    &:hover {
+      background: transparent;
+    }
+    &:active {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+  &__trigger {
+    position: absolute;
+    border-left: none;
+    background: url(../images/icons/angle-down.svg) center no-repeat;
+    top: 12px;
+    right: 0;
+    width: 10px;
+    height: 5px;
+  }
+  &__trigger-arrow {
+    display: none;
+  }
+  &__dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    width: 150px;
+    padding: 10px;
+  }
+}
 
 // ---------------------------------------------------------------------------------------------
 
