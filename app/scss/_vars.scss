@@ -31,3 +31,9 @@ $bg: #f6f6f6;
   clip: rect(0 0 0 0);
   position: absolute;
 }
+
+%pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
