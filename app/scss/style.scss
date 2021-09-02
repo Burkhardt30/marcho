@@ -551,6 +551,7 @@
       width: 200px;
       flex-shrink: 0;
       margin: 0px;
+      padding: 0;
       &:hover {
         transition: all 0.3s;
         .products-item__controls {
@@ -643,7 +644,7 @@
   }
   &__img-box {
     position: relative;
-    height: 370px;
+    padding: 0px 0px 100% 0px;
     width: 370px;
     overflow: hidden;
     margin: 0px 0px 30px 0px;
@@ -1364,12 +1365,11 @@
 
 .product-page {
   padding: 120px 0 5px;
-  &__inner {
-  }
 }
 
 .product-item {
   display: flex;
+  margin: 0px 0px 90px 0px;
   &__slider {
     margin: 0px 70px 0px 0px;
     display: flex;
@@ -1383,8 +1383,6 @@
     line-height: 1;
     color: $title;
     margin: 0px 0px 15px 0px;
-  }
-  &__body {
   }
   &__row {
     display: flex;
@@ -1420,8 +1418,6 @@
       @extend %r-400;
     }
   }
-  &__form {
-  }
   &__color {
     margin: 0px 0px 30px 0px;
   }
@@ -1447,6 +1443,7 @@
     height: 24px;
     border: 1px solid #d5d5d7;
     position: relative;
+    transition: all .3s;
     span {
       position: absolute;
       display: inline-block;
@@ -1458,7 +1455,7 @@
     }
   }
   &__size {
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 30px 0px;
   }
   &__size-title {
     color: $title;
@@ -1484,6 +1481,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: all .3s;
   }
   &__info {
     margin: 0px 0px 35px 0px;
@@ -1491,6 +1489,7 @@
   &__info-item {
     display: flex;
     align-items: center;
+    margin: 0 0 2px 0;
   }
   &__info-title {
     color: $title;
@@ -1530,6 +1529,7 @@
 }
 
 .jq-number {
+  top: 1px;
   width: 114px;
   position: relative;
   &__field {
@@ -1590,6 +1590,7 @@
     height: 140px;
     padding: 0px 0px 100% 0px;
     position: relative;
+    cursor: pointer;
     img {
       position: absolute;
       top: 0;
@@ -1617,6 +1618,225 @@
     }
   }
 }
+
+// ---------------------------------TABS----------------------------------
+
+.product-tabs {
+  padding: 0px 0px 60px 0px;
+  border-bottom: 1px solid #f0f0f0;
+  &__top {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__top-item {
+    @extend %r-400;
+    font-size: 22px;
+    margin: 0px 55px 0px 0px;
+    &:last-child {
+      margin: 0px;
+    }
+  }
+  &__top-item--active {
+    color: $title;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+    }
+  }
+  &__content-item {
+    display: none;
+  }
+  &__content-item--active {
+    display: block;
+  }
+}
+
+// ---------------------------------REVIEWS----------------------------------
+
+.reviews {
+  &__items {
+    margin: 0px 0px 60px 0px;
+  }
+  &__item {
+    margin-bottom: 35px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.reviews-comment {
+  display: flex;
+  &__img {
+    flex: 1 0 auto;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  &__name {
+    @extend %r-400;
+    color: $title;
+    margin-right: 30px;
+  }
+  &__date {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -14.5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $default;
+      width: 1px;
+      height: 14px;
+    }
+  }
+  &__stars {
+    margin-left: auto;
+  }
+  &__text {
+    margin-bottom: 5px;
+  }
+  &__btn {
+    position: relative;
+    padding: 0px 0px 0px 25px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 15px;
+      height: 13px;
+      background: url(../images/icons/angle-arrow-l.svg);
+    }
+  }
+}
+
+.reviews-form {
+  &__title {
+    @extend %r-400;
+    color: $title;
+    font-size: 22px;
+    position: relative;
+    padding: 0px 0px 18px 0px;
+    margin: 0px 0px 30px 0px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $accent;
+      width: 50px;
+      height: 2px;
+    }
+  }
+  &__rating {
+    display: flex;
+    margin: 0px 0px 25px 0px;
+  }
+  &__rating-title {
+    color: $title;
+    margin-right: 60px;
+  }
+  &__rating-label {
+    display: inline-block;
+    margin: 0px 25px 0px 0px;
+  }
+  &__rating-input {
+    @extend %checkbox-hidden;
+    &:checked + .reviews-form__radio {
+      path {
+        fill: #ffc35b;
+      }
+    }
+  }
+  &__radio {
+    display: inline-flex;
+    cursor: pointer;
+    svg {
+      height: 16px;
+      width: 18px;
+    }
+    path {
+      fill: #ccccce;
+    }
+  }
+  &__input-row {
+    width: 100%;
+    display: flex;
+    margin: 0px 0px 30px 0px;
+  }
+  &__input + &__input {
+    margin: 0px 0px 0px 30px;
+  }
+  &__input {
+    flex-grow: 1;
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px;
+  }
+  &__textarea {
+    width: 100%;
+    height: 225px;
+    padding: 15px 20px;
+    margin: 0px 0px 40px 0px;
+    border: 1px solid #f0f0f0;
+    resize: none;
+  }
+  &__btn {
+    max-width: 180px;
+  }
+}
+
+// =======================================RELATED===============================================
+// =============================================================================================
+
+.related {
+  padding: 50px 0px 115px 0px;
+  &__title {
+    @extend %r-700;
+    font-size: 48px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $title;
+    text-align: center;
+    margin: 0px 0px 55px 0px;
+  }
+  &__row {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  .products-item__img-box {
+    width: auto;
+    margin: 0px 0px 20px 0px;
+  }
+  .products-item__title {
+    font-size: 18px;
+    margin: 10px 0px 5px;
+  }
+}
+
+
+
+
+
+
 
 // ---------------------------------------------------------------------------------------------
 

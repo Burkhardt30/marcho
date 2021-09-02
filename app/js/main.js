@@ -1,5 +1,13 @@
 $(function () {
 
+  $('.product-tabs__top-item').on('click', function(e) {
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
   $('.shop-content__filter-btn').on('click', function() {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
@@ -45,6 +53,7 @@ $(function () {
     vertical: true,
     arrows: false,
     draggable: false,
+    focusOnSelect: true
   });
   
   $('.product-slider__big').slick({
