@@ -2081,6 +2081,198 @@
   }
 }
 
+// =========================================BLOG-ONE===========================================
+// =============================================================================================
+
+.blog-one {
+  &__body {
+    padding: 0px 0px 40px 0px;
+    border-bottom: 1px solid #ececec;
+  }
+  &__img {
+    max-width: 770px;
+    width: 100%;
+    padding: 0px 0px 58.44% 0px;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px;
+    h4 {
+      @extend %r-500;
+      color: $title;
+      font-size: 22px;
+      margin: 30px 0;
+    }
+    p {
+      margin: 30px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    blockquote {
+      @extend %r-400;
+      color: $title;
+      font-size: 22px;
+      line-height: 32px;
+      margin: 30px 0;
+    }
+  }
+  &__info-item {
+    display: inline-block;
+    padding-left: 26px;
+    position: relative;
+    margin-right: 25px;
+    &:last-child {
+      margin: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__date {
+    &::before {
+      background-image: url(../images/icons/date.svg);
+    }
+  }
+  &__comments-link {
+    &::before {
+      background-image: url(../images/icons/comment.svg);
+    }
+  }
+  &__author-link {
+    &::before {
+      background-image: url(../images/icons/user-icon-accent.svg);
+    }
+  }
+  &__left-img {
+    float: left;
+    padding-top: 6px;
+    margin: 0px 30px 10px 0;
+  }
+  &__right-img {
+    float: right;
+    padding-top: 6px;
+    margin: 0px 0px 10px 30px;
+  }
+  &__link-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  &__tags {
+    span {
+      display: inline-block;
+      @extend %r-500;
+      color: $title;
+      text-transform: uppercase;
+      margin-right: 5px;
+    }
+    a {
+      transition: all .3s;
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+  &__share {
+    span {
+      display: inline-block;
+      @extend %r-500;
+      color: $title;
+      text-transform: uppercase;
+      margin-right: 5px;
+    }
+  }
+  &__social-link {
+    display: inline-block;
+    line-height: 19px;
+    vertical-align: middle;
+    path {
+      fill: #727272;
+      transition: all 0.3s;
+    }
+    svg {
+      height: 16px;
+    }
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__social-link + &__social-link {
+    margin: 0px 0px 0px 5px;
+  }
+  &__author {
+    display: flex;
+    padding: 10px 0 0px;
+  }
+  &__author-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__author-name {
+    @extend %r-500;
+    color: $title;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 10px 0 15px;
+  }
+  &__comments {
+    padding: 40px 0px 40px 0px;
+    border-bottom: 1px solid #ececec;
+  }
+  &__comments-title {
+    color: $title;
+    @extend %r-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  &__comments-item {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .reviews-form {
+    padding-top: 40px;
+  }
+  &__form-title {
+    color: $title;
+    @extend %r-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+}
+
+// =========================================CONTACTS===========================================
+// =============================================================================================
+
+
+
+
+
+
+
 
 // ---------------------------------------------------------------------------------------------
 
