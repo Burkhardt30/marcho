@@ -19,6 +19,9 @@
 .menu {
   &__list {
     display: flex;
+    .logo {
+      display: none;
+    }
   }
   &__item + &__item {
     margin: 0px 0px 0px 35px;
@@ -197,6 +200,9 @@
     color: $title;
     font-size: 22px;
     margin: 0px 0px 33px 0px;
+  }
+  &__title--open {
+    pointer-events: none;
   }
   &__list-item {
     margin: 0px 0px 10px 0px;
