@@ -7,7 +7,7 @@ body {
   @extend %qs-500;
   font-size: 16px;
   line-height: 26px;
-  color: #8d8d8d;
+  color: $default;
   display: flex;
   flex-direction: column;
 }
@@ -20,4 +20,84 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.marcho-btn {
+  border: none;
+  color: #fff;
+  background-color: $accent;
+  display: block;
+  font-size: 16px;
+  @extend %r-400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 160px;
+  width: 100%;
+  padding: 12px 10px;
+  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  text-align: center;
+  cursor: pointer;
+}
+
+.heading {
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto;
+  &__title {
+    @extend %r-700;
+    font-size: 48px;
+    line-height: 1;
+    color: $title;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+  }
+}
+
+.header--404-page {
+  background-color: $bg;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  &__btn {
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8.5px;
+      height: 10px;
+      width: 5px;
+    }
+  }
+  &__prev {
+    padding-left: 15px;
+    &::before {
+      background: url(../images/icons/angleleft.svg);
+      left: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    margin: 0 45px;
+  }
+  &__item + &__item {
+    margin: 0px 0px 0px 30px;
+  }
+  &__item {
+    &:nth-child(4) {
+      margin: 0px -15px 0px 15px;
+    }
+  }
+  &__item--active {
+    color: $accent;
+  }
+  &__next {
+    padding-right: 15px;
+    &::before {
+      background: url(../images/icons/angleright.svg);
+      right: 0;
+    }
+  }
 }
