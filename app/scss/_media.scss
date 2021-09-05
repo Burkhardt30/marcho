@@ -1,8 +1,121 @@
+@media (max-width: 1435px) {
+  .main-silder {
+    &__content {
+      padding: 120px 0px 0px 100px;
+    }
+  }
+  // ---------------------------------------------
+}
+
+@media (max-width: 1370px) {
+  .main-silder {
+    &__content {
+      padding: 70px 0px 0px 100px;
+    }
+  }
+  // ---------------------------------------------
+}
+
+@media (max-width: 1250px) {
+  .features {
+    &__item {
+      padding: 40px 20px;
+    }
+    &::after {
+      right: 0px;
+    }
+  }
+  // ---------------------------------------------
+  .blog {
+    &__row {
+      &::after {
+        right: 0px;
+      }
+    }
+  }
+  // ---------------------------------------------
+}
+
 @media (max-width: 1200px) {
   .user-nav {
     padding: 0px 10px 0px 0px;
   }
+  // ---------------------------------------------
+  .main-silder {
+    &__item {
+      img {
+        max-width: 45%;
+      }
+    }
+    &__content {
+      padding: 55px 0px 0px 40px;
+    }
+    &__title {
+      font-size: 50px;
+      line-height: 55px;
+    }
+  }
+  // ---------------------------------------------
+  .heading {
+    &__title {
+      font-size: 40px;
+    }
+  }
+  .top-categories {
+    &__items {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    &__item {
+      &:nth-child(1) {
+        grid-row: auto;
+        .top-categories__item-subtitle {
+          color: #5800e4;
+        }
+        .top-categories__item-link {
+          &:hover {
+            color: #5800e4;
+            border-bottom: 1px solid #5800e4;
+          }
+        }
+      }
+      &:nth-child(2) {
+        grid-column: auto;
+        padding-top: 0;
+        justify-content: center;
+        .top-categories__item-subtitle {
+          color: $accent;
+        }
+        .top-categories__item-link {
+          &:hover {
+            color: $accent;
+            border-bottom: 1px solid $accent;
+          }
+        }
+      }
+    }
+  }
+  // ---------------------------------------------
+  .video-fashion {
+    &__title {
+      font-size: 40px;
+    }
+  }
+  // ---------------------------------------------
+  .promo {
+    background: $bg;
+    &__inner {
+      margin: 0 auto;
+    }
+  }
+  // ---------------------------------------------
+  .blog {
+    &__title-box {
+      padding: 25px 15px;
+    }
+  }
+  // ---------------------------------------------
 }
+
 @media (max-width: 1000px) {
   .footer {
     &__top {
@@ -22,7 +135,77 @@
       }
     }
   }
+  // ---------------------------------------------
+  .main-silder {
+    &__inner {
+      padding: 25px 0 40px;
+    }
+    &__content {
+      padding: 45px 0px 0px 0px;
+    }
+    &__title {
+      font-size: 45px;
+      line-height: 48px;
+    }
+    &__text {
+      margin: 0px 0px 35px 0px;
+    }
+  }
+  // ---------------------------------------------
+  .features {
+    &__item {
+      padding: 20px 20px;
+      svg {
+        margin: 0px 0px 15px 0px;
+      }
+    }
+  }
+  .heading {
+    &__title {
+      font-size: 35px;
+    }
+  }
+  // ---------------------------------------------
+  .video-fashion {
+    &__popup {
+      width: 450px;
+      height: 402px;
+      margin: 0px 30px 0px 0px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      margin: 0px 0px 10px 0px;
+    }
+    &__title {
+      font-size: 35px;
+      margin: 0px 0px 20px 0px;
+    }
+    &__text {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+  // ---------------------------------------------
+  .promo {
+    &__subtitle {
+      font-size: 18px;
+      margin: 0px 0px 10px 0px;
+    }
+    &__title {
+      font-size: 35px;
+    }
+  }
+  // ---------------------------------------------
+  .blog {
+    &__title {
+      font-size: 18px;
+    }
+  }
+  .blog-info {
+    display: block;
+  }
+  // ---------------------------------------------
 }
+
 @media (max-width: 850px) {
   .blackout {
     display: block;
@@ -110,6 +293,67 @@
       top: 0;
     }
   }
+  // ---------------------------------------------
+  .main-silder {
+    &__inner {
+      padding: 25px 0 10px;
+    }
+    &__item {
+      img {
+        display: none;
+      }
+    }
+    &__content {
+      padding: 0px 0px 30px 0px;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      margin: -4px 0 0 0;
+    }
+  }
+  // ---------------------------------------------
+  .top-categories {
+    &__items {
+      min-height: auto;
+    }
+    &__item {
+      background-image: none !important;
+      justify-content: center;
+      &:nth-child(1) {
+        background-color: #f4dff0;
+      }
+      &:nth-child(2) {
+        padding: 40px;
+        background-color: #d7efef;
+      }
+      &:nth-child(3) {
+        background-color: #fff6a7;
+      }
+      &:nth-child(4) {
+        background-color: #ededed;
+      }
+    }
+  }
+  // ---------------------------------------------
+  .video-fashion {
+    &__inner {
+      display: block;
+    }
+    &__popup {
+      width: 100%;
+      background-position: center 30%;
+      margin: 0px 0px 30px 0px;
+    }
+  }
+  // ---------------------------------------------
+  .products {
+    &__items {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+  // ---------------------------------------------
 }
 
 @media (max-width: 700px) {
@@ -129,8 +373,6 @@
       text-align: center;
       margin-left: 0;
       max-width: none;
-    }
-    &__item {
     }
     &__item--address {
       text-align: center;
@@ -165,6 +407,69 @@
       margin-top: 30px;
     }
   }
+  // ---------------------------------------------
+  .features {
+    flex-direction: column;
+    &__item + &__item {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    &__item {
+      max-width: none;
+    }
+  }
+  .top-categories {
+    &__items {
+      grid-gap: 10px;
+    }
+    &__item {
+      padding: 20px;
+      &:nth-child(2) {
+        padding: 20px;
+      }
+    }
+  }
+  // ---------------------------------------------
+  .products {
+    &__heading {
+      margin-bottom: 40px;
+    }
+  }
+  .products-item {
+    &__img-box {
+      margin: 0px 0px 15px 0px;
+    }
+    &__title {
+      margin: 10px 0 5px;
+    }
+  }
+  // ---------------------------------------------
+  .promo {
+    &__countdown {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0px 0px 40px 0px;
+    }
+    &__countdown-item {
+      margin: 0 40px 20px;
+    }
+  }
+  // ---------------------------------------------
+  .blog {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item-wrapper {
+      flex: 0 1 50%;
+      margin: 0px 0px 20px 0px;
+      &:last-child {
+        margin: 0;
+        flex: 0 1 auto;
+      }
+    }
+  }
+  // ---------------------------------------------
 }
 
 @media (max-width: 550px) {
@@ -173,6 +478,7 @@
       width: 100%;
     }
   }
+  // ---------------------------------------------
   .footer {
     &__bottom {
       flex-wrap: wrap;
@@ -183,6 +489,89 @@
       text-align: center;
     }
   }
+  .main-silder {
+    &__title {
+      font-size: 40px;
+      line-height: 43px;
+    }
+  }
+  // ---------------------------------------------
+  .heading {
+    &__title {
+      font-size: 32px;
+    }
+  }
+  .categories {
+    padding: 120px 0;
+    background: url(../images/decor/categories-left-bg.svg) center center no-repeat;
+  }
+  .top-categories {
+    &__items {
+      display: block;
+    }
+    &__item {
+      margin-bottom: 10px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  // ---------------------------------------------
+  .video-fashion {
+    &__title {
+      font-size: 32px;
+    }
+    &__popup {
+      height: 260px;
+    }
+    &__play-btn {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  // ---------------------------------------------
+  .products {
+    &__items {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+  .products-item {
+    max-width: none;
+    &__img-box {
+      max-width: none;
+    }
+  }
+  // ---------------------------------------------
+  .promo {
+    &__title {
+      font-size: 32px;
+    }
+  }
+  // ---------------------------------------------
+  .partners {
+    padding: 80px 0 0;
+    &__list {
+      justify-content: center;
+      flex-wrap: wrap;
+      height: auto;
+    }
+    &__item {
+      margin: 10px 0;
+      flex: 0 1 33.33%;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  // ---------------------------------------------
+  .blog {
+    padding: 70px 0 80px;
+    &__item-wrapper {
+      flex: 0 1 auto;
+    }
+  }
+  // ---------------------------------------------
 }
 
 @media (max-width: 450px) {
@@ -196,6 +585,7 @@
     width: 100%;
     justify-content: flex-end;
   }
+  // ---------------------------------------------
   .subscribe-newsletter {
     &__form {
       flex-direction: column;
@@ -205,4 +595,33 @@
       margin: 10px 0px 0px 0px;
     }
   }
+  // ---------------------------------------------
+  .categories,
+  // ---------------------------------------------
+  .video-fashion,
+  // ---------------------------------------------
+  .products {
+    padding: 80px 0;
+  }
+  // ---------------------------------------------
+  .promo {
+    &__inner {
+      padding: 80px 0;
+    }
+    &__countdown {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0px 0px 40px 0px;
+    }
+    &__countdown-item {
+      margin: 0 8px 15px;
+    }
+  }
+  // ---------------------------------------------
+  .partners {
+    &__item {
+      flex: 0 1 50%;
+    }
+  }
+  // ---------------------------------------------
 }
