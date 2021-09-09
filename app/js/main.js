@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.shop__show-filters').on('click', function(){
+    $('.shop__filters').toggleClass('shop__filters--show');
+  });
+
   $('.footer__title--open').on('click', function(){
     $(this).next().slideToggle();
     $(this).toggleClass('footer__title--arrow');
@@ -31,9 +35,11 @@ $(function () {
 
   $('.content-list').on('click', function() {
     $('.products-item').addClass('products-item--list');
+    $('.shop-content__inner').addClass('shop-content__inner--flex');
   });
   $('.content-grid').on('click', function() {
     $('.products-item').removeClass('products-item--list');
+    $('.shop-content__inner').removeClass('shop-content__inner--flex');
   });
 
   $('.shop-content__styler, .product-item__number').styler({
@@ -69,7 +75,15 @@ $(function () {
     vertical: true,
     arrows: false,
     draggable: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          vertical: false
+        }
+      }
+    ]
   });
   
   $('.product-slider__big').slick({
@@ -79,6 +93,14 @@ $(function () {
     fade: true,
     arrows: false,
     draggable: false,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          draggable: true
+        }
+      }
+    ]
   });
 
   $('.stars').rateYo({
